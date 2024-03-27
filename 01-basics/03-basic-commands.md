@@ -26,8 +26,8 @@ $ ls
 
 Parameters: 
 
-* -a => Show all, including hidden files.  
-* -l => Long Listing Format 
+* -a &rarr; Show all, including hidden files.  
+* -l &rarr; Long Listing Format 
 
 
 ## cat

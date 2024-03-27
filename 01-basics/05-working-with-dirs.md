@@ -3,7 +3,7 @@
 
 ## Directory Shortcuts
 
-* . -> This directory
+* . &rarr; This directory
 * .. -> The parent directory
 * cd - Change to the previous directory. 
 * $OLDPWD -> Holds the directory that you were previously in.

@@ -78,7 +78,30 @@ $ chmod u=rwx,g=rx,o= sales.data
 
 ## Numeric Based Permissions
 
-r | w | x | 
---- | --- | --- | 
-0 | 0 | 0 |
-1 | 1 | 1 | 
+r | w | x | Values Types |
+--- | --- | --- |  --- | 
+0 | 0 | 0 | Value for off | 
+1 | 1 | 1 | Binary value for on | 
+4 | 2 | 1 | Base 10 value for on(Read = 4, Write=2,Execute=1) | 
+
+
+
+Octal | Binary | String | Description | 
+--- | --- | --- | --- | 
+0 | 0 | --- | No permissions | 
+1 | 1 | --x | Execute Only | 
+2 | 10 | -w- | Write Only | 
+3 | 11 | -wx | Write and execute (2+1) | 
+4 | 100 | r-- | Read Only | 
+5 | 101 | r-x | Read and Execute (4+1) | 
+6 | 110 | rw- | Read and Write (4+2) | 
+7 | 111 | rwx | All permissions (4+2+1) |
+
+
+The `755` permission allows everyone on the system to execute the file. 
+
+```
+$ chmod 700 file_name.txt
+```
+
+**Avoid `777` and `666` permission mode**. 

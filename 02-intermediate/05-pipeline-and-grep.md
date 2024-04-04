@@ -103,3 +103,13 @@ $ grep bob /etc/passwd | cut -d: -f1,5 | sort | tr ":" " "
 
 $ grep bob /etc/passwd | cut -d: -f1,5 | sort | tr ":" " "  | column -t
 ```
+
+## Piping Output to a Pager
+* more
+* less
+
+```
+$ cat /etc/passwd | less
+
+$ grep bin /etc/passwd | less
+```

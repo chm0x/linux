@@ -29,7 +29,9 @@ Format String | Description |
 echo 'export PS1="[\u@\h \w]\$ "' >> ~/.bash_profile
 ```
 
-
+On `.bashrc` or `.bash_profile` or in the shell.
 ```
 $ PS1="<\t \u@\h \w>\$"
+
+$ PS1="\t\n[\h \w]\$ "
 ```

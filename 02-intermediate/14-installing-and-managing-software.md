@@ -69,12 +69,33 @@ $ dnf remove package_name
 
 # Update package
 $ dnf upgrade [package]
+
+# Autoremove
+$ dnf autoremove
+```
+
+Examples: 
+```
+$ dnf search nginx 
+
+$ dnf info nginx
+
+$ dnf list installed nginx
+
+$ which nginx
+
+$ dnf remove -y nginx
+
+$ dnf upgrade 
+
+$ dnf info "*example*"
 ```
 
 #### rpm - command
 
 ```
 # List all installed package
+# option -a stand for "all". 
 $ rpm -qa
 
 # List the file's package
@@ -90,11 +111,31 @@ $ rpm -ivh package.rpm
 $ rpm -e package
 ```
 
+Example: 
+
+```
+$ rpm -ivh example.rpm
+
+# Search a specific package. 
+$ rpm -q example
+
+# Search a list of files from a specific package. 
+$ rpm -ql example
+
+$ rpm -qf /usr/local/bin/example
+
+$ rpm -e
+```
 
 ### DEB distro
 
 Debian, Ubuntu, and Linux Mind
 
+
+## Processors
+
+* 64 bit intel or AMD &rarr; x86_64 package
+* 64 bit ARM processor &rarr; R, C, H, 64 package   
 
 
 

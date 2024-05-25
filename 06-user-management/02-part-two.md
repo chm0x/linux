@@ -28,3 +28,54 @@ That information of password is stored in the `/etc/gshadow` file.
 ```
 $ groups root
 ```
+
+### CREATE A NEW GROUP
+
+```
+# Format
+$ groupadd [options] [new_group_name]
+
+# Example
+$ groupadd web
+
+$ groupadd -g 2500 db
+```
+
+OPTIONS | DESCRIPTION | 
+--- | --- |
+`-g` | Allows you to specify the GID. |
+
+
+### DELETE A GROUP
+
+```
+# Format:
+$ groupdel [group_name]
+
+# Example:
+$ groupdel db
+```
+
+### MODIFY AN EXISTING GROUP
+
+```
+# Format:
+$ groupmod [options] group_name
+
+# Rename
+$ groupmod -n [new_name] [old_name]
+```
+
+OPTIONS | DESCRIPTION | 
+--- | --- | 
+`-g GID` | Change the group ID to GID. | 
+`-n GROUP` | Rename the group to GROUP. | 
+
+
+Examples:
+```
+$ groupmod -g 1234 web
+
+$ groupmod -n http web
+```
+

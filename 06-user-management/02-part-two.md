@@ -79,3 +79,21 @@ $ groupmod -g 1234 web
 $ groupmod -n http web
 ```
 
+
+Examples to Add User and Groups and Assignment: 
+```
+$ groupadd writers
+$ groupadd tv
+$ groupadd movie
+
+$ useradd -c "Ethan Whinters" -g writers -G tv -m -s /bin/bash ethan
+
+# create a password for ethan
+$ passwd ethan
+
+# Assing a user to two groups.
+$ useradd -c "Ben Affleck" -g writers -G tv,movie -m -s /bin/bash baffleck
+
+
+```
+

@@ -159,3 +159,47 @@ drwxrwxrwt 10 root root 4096 date /tmp
 It's used on a directory to only allow the files owner, the directory owner or the root user to rename or delete the file. 
 
 Without the sticky bit set on a directory, the user could delete another user's file if the permissions on the directory allowed for it. 
+
+### ADDING THE **STICKY** BIT
+
+Examples:
+```
+$ chmod o+t /path/to/directory
+
+$ chmod 1777 /path/to/directory
+```
+
+### REMOVING THE **STRICKY** BIT
+
+Examples:
+```
+$ chmod o-t /path/to/directory
+
+$ chmod 0777 /path/to/directory
+```
+
+## READING `ls` OUTPUT
+
+* A capitalized special permission means the underlying normal permission is not set. 
+* A lower case special permission means the underlying normal permission set. 
+
+Demo:
+```
+$ ls -l test
+Output: -rw-r--r-- 1 root root 0 [date] test
+
+$ chmod u+s test
+Output: -rwSr--r-- 1 root root [date] test
+
+$ chmod u+x test
+Output: -rwsr--r-- 1 root root [date] test
+```
+
+Another examples:
+```
+-rwxrwSr-- 1 root root 0 [date] test
+
+
+# The sticky bit is set, but the execute bit is not set for others. 
+drwxr-xr-T 2 root root 0 [date] test
+```
